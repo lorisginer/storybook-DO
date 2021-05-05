@@ -1,39 +1,39 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { Button, ButtonProps } from './Button';
+import { TagDisplay, TagDisplayProps } from './TagDisplay';
 
 export default {
-  title: 'Example/Button',
-  component: Button,
+  title: 'Example/TagDisplay',
+  component: TagDisplay,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: Story<TagDisplayProps> = (args) => <TagDisplay {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  label: 'Button',
+  label: 'TagDisplay',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
+  label: 'TagDisplay',
 };
 
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
-  label: 'Button',
+  label: 'TagDisplay',
 };
 
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
-  label: 'Button',
+  label: 'TagDisplay',
 };
 
 

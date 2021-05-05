@@ -15,6 +15,11 @@ export interface ButtonProps {
   label: string;
 
 }
+function visibleCSS(b : boolean) : CSS.Properties {
+  return b
+    ? {visibility: 'visible'}
+    : {visibility: 'hidden'}
+}
 
 /**
  * Primary UI component for user interaction
@@ -26,22 +31,17 @@ export const Button: React.FC<ButtonProps> = ({
   label,
   ...props
 }) => {
-
+  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  
   const [idVisible, setVisible] = useState(1);
   const [selected, setSelected] = useState(false)
 
-  const invisible: CSS.Properties = {
-    visibility:'hidden'
-  }
 
-  const visible: CSS.Properties = {
-    visibility:'visible'
-  }
 
   const state = {
       visibles: [
-        visible,
-        invisible
+        visibleCSS(true),
+        visibleCSS(false)
       ],
       id:idVisible
   }
@@ -52,7 +52,7 @@ export const Button: React.FC<ButtonProps> = ({
     setSelected(!selected)
     
   }
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  
   return (
     <span
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
@@ -63,7 +63,5 @@ export const Button: React.FC<ButtonProps> = ({
       {label}
      <span className="icon" style={state.visibles[state.id]}><FaCheck /></span> 
     </span>
-
-  
   );
 };

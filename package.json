@@ -19,7 +19,7 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "npm run storybook",
+    "start": "node run storybook",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

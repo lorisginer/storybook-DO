@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 
 
-library.add(fab, faCheckSquare, faCoffee)
 
 function App() {
   return (

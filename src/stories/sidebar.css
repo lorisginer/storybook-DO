@@ -1,0 +1,78 @@
+.storybook-sidebar {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1006;
+  width: 64px;
+  text-align: left;
+  transition: all 85ms ease-out;
+  display: inline-block;
+}
+
+.text {
+  position: absolute;
+  display: inline-block;
+  line-height: 55px;
+  font-size: 20px;
+  transition: all 85ms ease-out;
+}
+
+a {
+  color: inherit;
+}
+
+.icon-sidebar {
+  display: inline-block;
+  font-size: 23px;
+  height: 50px;
+  transition: all 85ms ease-out;
+  cursor: pointer;
+}
+
+.icon-sidebar:hover {
+  background-color: #0000001f;
+}
+
+.element {
+  margin-top: 16px;
+  width: 64px;
+  overflow: auto;
+}
+
+.button-sidebar {
+  font-size: 23px;
+  color: white;
+  width: 64px;
+  height: 64px;
+  background-color: #ffffff00;
+  border: none;
+  cursor: pointer;
+}
+
+.main-div-sidebar {
+  width: 64px;
+  height: 200px;
+}
+
+.storybook-sidebar--primary {
+  color: white;
+  background-color: #1ea7fd;
+}
+.storybook-sidebar--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.storybook-sidebar--small {
+  font-size: 12px;
+}
+.storybook-sidebar--medium {
+  font-size: 14px;
+}
+.storybook-sidebar--large {
+  font-size: 16px;
+}
